@@ -1,0 +1,26 @@
+# TeleBirr Tip Calculator
+
+# Step 1: Store the bill total and number of people
+bill_total = 1200  # ETB
+people = 4
+
+# List of friends
+friends = ["Abebe", "Almaz", "Dawit", "Tigist"]
+
+# Step 2: Function to split the bill
+def split_bill(total, people, tip_rate=0.10):
+    tip = total * tip_rate
+    total_with_tip = total + tip
+    return total_with_tip / people
+
+# Step 3: Compute each person's share
+share = split_bill(bill_total, people)
+
+# Step 4: Print each person's share
+print("=== TeleBirr Tip Calculator ===")
+print(f"Bill Total: {bill_total} ETB")
+print(f"Tip Rate: 10%")
+print(f"People: {people}\n")
+
+for person in friends:
+    print(f"{person} should pay: {share:.2f} ETB")
